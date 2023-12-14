@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Spamer.Controls.SettingsMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Spamer.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="600">
+    <Grid>
+        <TextBlock Opacity="0.8" TextAlignment="Center" FontSize="20" Margin="0 20 0 0" FontFamily="Open Sans" Text="Настройки приложения" Foreground="White"></TextBlock>
+        <StackPanel Margin="5 90 5 0" Orientation="Vertical">
+            
+            
+            <StackPanel Margin="0 30 0 0" Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" FontSize="15" Text="Путь до файла .cfg" TextAlignment="Center" FontFamily="Open Sans" Foreground="White"></TextBlock>
+                <materialDesign:PackIcon Kind="ArrowRightBold" Margin="5 0 0 0" Foreground="White" Height="25"></materialDesign:PackIcon>
+                <TextBox x:Name="cfg_path_box" IsEnabled="False" materialDesign:HintAssist.Hint="Путь до файл с конфигурацией приложения" FontWeight="SemiBold" FontSize="13" Foreground="White" Margin="10 0 0 0" Width="405"></TextBox>
+            </StackPanel>
+
+            <StackPanel Margin="0 30 0 0" Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" FontSize="15" Text="Путь до файла .acc" TextAlignment="Center" FontFamily="Open Sans" Foreground="White"></TextBlock>
+                <materialDesign:PackIcon Kind="ArrowRightBold" Margin="5 0 0 0" Foreground="White" Height="25"></materialDesign:PackIcon>
+                <TextBox x:Name="acc_path_box" materialDesign:HintAssist.Hint="Путь до файла с аккаунтами (системный, для приложения)" FontWeight="SemiBold" FontSize="13" Foreground="White" Margin="10 0 0 0" Width="405"></TextBox>
+            </StackPanel>
+
+            <StackPanel Margin="0 30 0 0" Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" FontSize="15" Text="Путь до файла .txt" TextAlignment="Center" FontFamily="Open Sans" Foreground="White"></TextBlock>
+                <materialDesign:PackIcon Kind="ArrowRightBold" Margin="5 0 0 0" Foreground="White" Height="25"></materialDesign:PackIcon>
+                <TextBox x:Name="txt_path_box" materialDesign:HintAssist.Hint="Путь до файла со список ID серверов" FontWeight="SemiBold" FontSize="13" Foreground="White" Margin="10 0 0 0" Width="405"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 30 0 0" Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" FontSize="15" Text="Путь до файла .log" TextAlignment="Center" FontFamily="Open Sans" Foreground="White"></TextBlock>
+                <materialDesign:PackIcon Kind="ArrowRightBold" Margin="5 0 0 0" Foreground="White" Height="25"></materialDesign:PackIcon>
+                <TextBox x:Name="log_path_box" materialDesign:HintAssist.Hint="Путь до файла с логами" FontWeight="SemiBold" FontSize="13" Foreground="White" Margin="10 0 0 0" Width="405"></TextBox>
+            </StackPanel>
+            
+
+            <Button FontSize="20" Content="Применить" Margin="0 5 0 0" Style="{StaticResource MaterialDesignFlatButton}" Height="60" Click="btn_cfgApply_Click"></Button>
+            <TextBlock Opacity="0.6" TextAlignment="Center" FontSize="10" Margin="0 0 0 0" FontFamily="Open Sans" Text="*Советую ничего не изменять в данной вкладке, если вы не уверены в правильности написанного." Foreground="White"></TextBlock>
+        </StackPanel>
+
+        
+    </Grid>
+</UserControl>

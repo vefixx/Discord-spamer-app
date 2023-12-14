@@ -1,0 +1,40 @@
+﻿<Window x:Class="Spamer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spamer"
+        mc:Ignorable="d"
+        Title="MainWindow" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Background="#F2141414" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize" MouseLeftButtonDown="Window_Drag">
+    
+    <Grid>
+        <StackPanel Orientation="Horizontal" Background="#1e1e1e" VerticalAlignment="Top" Height="30">
+            <TextBlock Margin="4 0 0 0" FontFamily="Open Sans" Foreground="White" FontWeight="SemiBold" Height="15" Text="Developed by vefixx" TextAlignment="Center"></TextBlock>
+            <Button FontSize="10" Width="50" Margin="580 0 0 0" Content="—" Height="30" Style="{StaticResource MaterialDesignFlatButton}" Click="FoldingWindow_Click"></Button>
+            <Button FontSize="10" Width="50" Content="X" Height="30" Style="{StaticResource MaterialDesignFlatButton}" Click="CloseWindow_Click"></Button>
+        </StackPanel>
+        <StackPanel Margin="0 30 0 0" Background="#1e1e1e" Orientation="Vertical" HorizontalAlignment="Left" Width="200">
+            <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
+                <Button Width="170" Height="50" Style="{StaticResource MaterialDesignFlatButton}" Content="Главное меню" Foreground="White" Click="btn_MainMenu_Click"></Button>
+                <materialDesign:PackIcon x:Name="MainMenuIcon" Kind="ChevronDoubleLeft" Height="50" Width="30" Foreground="White"></materialDesign:PackIcon>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <Button Width="170" Height="50" Style="{StaticResource MaterialDesignFlatButton}" Content="Аккаунты" Foreground="White" Click="btn_Accounts_Click"></Button>
+                <materialDesign:PackIcon x:Name="AccountsIcon" Kind="ChevronDoubleLeft" Height="50" Width="30" Foreground="White"></materialDesign:PackIcon>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <Button Width="170" Height="50" Style="{StaticResource MaterialDesignFlatButton}" Content="Логи" Foreground="White" Click="btn_LogsMenu_Click"></Button>
+                <materialDesign:PackIcon x:Name="LogsIcon" Kind="ChevronDoubleLeft" Height="50" Width="30" Foreground="White"></materialDesign:PackIcon>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <Button Width="170" Height="50" Style="{StaticResource MaterialDesignFlatButton}" Content="Настройки" Foreground="White" Click="btn_Settings_Click"></Button>
+                <materialDesign:PackIcon x:Name="SettingsIcon" Kind="ChevronDoubleLeft" Height="50" Width="30" Foreground="White"></materialDesign:PackIcon>
+            </StackPanel>
+        </StackPanel>
+        
+        <ContentControl x:Name="CC" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="420" Width="600">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.2" FontWeight="Bold" FontSize="50" TextAlignment="Center" Foreground="White" Text="Hello World"></TextBlock>
+        </ContentControl>
+    </Grid>
+</Window>

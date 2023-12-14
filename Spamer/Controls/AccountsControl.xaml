@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Spamer.Controls.AccountsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Spamer.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="600">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="200">
+            <TextBlock FontFamily="Open Sans" Foreground="White" Text="Аккаунты" FontSize="20" FontWeight="SemiBold" TextAlignment="Center"></TextBlock>
+            <ListBox SelectionMode="Single" x:Name="ListBox_Accounts" FontFamily="Open Sans" FontWeight="SemiBold" Foreground="#9999FF" FontSize="13" Width="200" Height="370" AllowDrop="True" Drop="AccountsList_Drop"/>
+            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="22" Content="Удалить выбранный аккаунт" Foreground="#FF3333" FontFamily="Open Sans" FontSize="10" FontWeight="SemiBold" Click="btn_DeleteAccounts_Click">
+            </Button>
+        </StackPanel>
+        <StackPanel Background="White" HorizontalAlignment="Right" Width="1" Margin="0 0 400 0">
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" Width="400">
+            <TextBlock TextWrapping="Wrap" Width="350" FontFamily="Open Sans" Foreground="White" FontSize="15" FontWeight="SemiBold" TextAlignment="Center">
+                <Run>Для</Run> <Run Foreground="#339966">добавления</Run> <Run>аккаунта, перетащите файл с токенами в левую часть окна «Аккаунты».</Run>
+            </TextBlock>
+            <TextBlock Margin="0 20 0 0" TextWrapping="Wrap" Width="350" FontFamily="Open Sans" Foreground="White" FontSize="15" FontWeight="SemiBold" TextAlignment="Center">
+                <Run>Аккаунты, которые были забанены или недействительны</Run> <Run Foreground="#FF3333">автоматически удаляются</Run>.
+            </TextBlock>
+            <Button Style="{StaticResource MaterialDesignFlatButton}" Height="100" Content="Обновить список аккаунтов" Margin="0 217 0 0" Click="btn_UpdateAccounts_Click"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

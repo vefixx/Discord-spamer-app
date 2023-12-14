@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Spamer.Controls.MainMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Spamer.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="600">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0 40 0 0">
+            <TextBlock FontFamily="Open Sans" FontSize="20" Foreground="White" FontWeight="SemiBold" Text="Developed by vefixx" TextAlignment="Center"></TextBlock>
+            <TextBlock FontFamily="Open Sans" FontSize="10" Foreground="White" FontWeight="SemiBold" Text="discord.gg/NCxYg7skc5" TextAlignment="Center"></TextBlock>
+            <TextBlock Margin="0 40 0 0" FontFamily="Open Sans" FontSize="12" Foreground="White" FontWeight="SemiBold" TextAlignment="Center">
+                <Run>Рабочих аккаунтов:</Run> <Run FontWeight="Bold" x:Name="count_validAccounts_text"></Run>
+            </TextBlock>
+            
+            <TextBlock Margin="0 15 0 0" FontFamily="Open Sans" FontSize="12" Foreground="White" FontWeight="SemiBold" TextAlignment="Center">
+                <Run>Добавленных серверов:</Run> <Run FontWeight="Bold" x:Name="count_servers_text"></Run>
+            </TextBlock>
+            <TextBlock Margin="0 15 0 0" FontFamily="Open Sans" FontSize="12" Foreground="White" FontWeight="SemiBold" TextAlignment="Center">
+                <Run>Используется конфиг:</Run> <Run FontWeight="Bold" x:Name="config_name_text"></Run>
+            </TextBlock>
+            <StackPanel Margin="0 100 0 0" Width="550" Orientation="Horizontal">
+                <TextBlock Margin="0 0 0 0" FontFamily="Open Sans" FontSize="16" Foreground="White" FontWeight="SemiBold" TextAlignment="Center">
+                <Run>Файлы/Изображения:</Run>
+                </TextBlock>
+
+                <TextBox FontSize="15" x:Name="images_textbox" FontFamily="Open Sans" FontWeight="SemiBold" Margin="10 0 0 0" Foreground="White" materialDesign:HintAssist.Hint="Введите файлы через запятую" Width="310"></TextBox>
+                <Button Style="{StaticResource MaterialDesignIconButton}" Click="btn_ApplyImages_Click">
+                    <materialDesign:PackIcon Kind="CheckAll"></materialDesign:PackIcon>
+                </Button>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>
